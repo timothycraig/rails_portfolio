@@ -1,3 +1,11 @@
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
+  )
+end
+
+puts "3 topics created"
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post #{blog}",
@@ -9,7 +17,8 @@
     now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum'
     will uncover many web sites still in their infancy. Various versions have
     evolved over the years, sometimes by accident, sometimes on purpose
-    (injected humour and the like)."
+    (injected humour and the like).",
+    topic_id: Topic.last.id
   )
 end
 
