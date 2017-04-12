@@ -2,10 +2,12 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   def index
+    @page_title = 'Blog'
     @blogs = Blog.all
   end
 
   def show
+    @page_title = @blog.title
   end
 
   def new

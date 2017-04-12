@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
   include DeviseParamsConcern
   include SessionConcern
   include CurrentUserConcern
+  include PageContentConcern
 
 end
