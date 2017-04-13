@@ -6,7 +6,7 @@ module PageContentConcern
   extend ActiveSupport::Concern
 
   included do
-    before_filter :page_title
+    before_action :page_title
   end
 
   def page_title
