@@ -1,0 +1,44 @@
+
+section#title {
+  @include grid-container;
+  @include padding(30px 0);
+
+  h1 {
+    @include grid-column(12);
+  }
+}
+
+section#text {
+  @include grid-container;
+  @include padding(30px 0);
+
+  p {
+    @include grid-column(12);
+    margin-bottom: 2rem;
+
+    @include grid-media($tablet_on_up) {
+      @include grid-column(6);
+    }
+  }
+}
+
+section#boxes {
+  @include grid-container;
+  @include padding(30px 0);
+
+  .box {
+    @include size(300px);
+    background-image: linear-gradient(to bottom right, #21e9f4, #00bcdd);
+
+    @include grid-column(12);
+    margin-bottom: 2rem;
+
+    @include grid-media($tablet_on_up) {
+      @include grid-column(6);
+    }
+
+    @include grid-media($desktop_on_up) {
+      @include grid-column(3);
+    }
+  }
+}

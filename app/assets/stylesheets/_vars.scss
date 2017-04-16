@@ -1,0 +1,37 @@
+/* ----------------------------------------------------
+ Colors
+---------------------------------------------------- */
+
+$white: #fff;
+$grey: #323840;
+$light_blue: #00bcdd;
+
+
+/* ----------------------------------------------------
+ Custom Grids (media queries are min-width)
+ NOTE: Grids are designed with a mobile first approach
+---------------------------------------------------- */
+
+$mobile_small_on_up: (
+  columns: 12,
+  gutter: 20px,
+  media: 320px,
+);
+
+$mobile_large_on_up: (
+  columns: 12,
+  gutter: 20px,
+  media: 480px,
+);
+
+$tablet_on_up: (
+  columns: 12,
+  gutter: 20px,
+  media: 768px,
+);
+
+$desktop_on_up: (
+  columns: 12,
+  gutter: 20px,
+  media: 1024px,
+);
