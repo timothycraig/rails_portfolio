@@ -25,8 +25,9 @@ gem 'uglifier', '>= 1.3.0'
 gem "neat", '~> 2.0.0'
 gem "bourbon", '~> 4.3.4'
 
-# Authentication
+# Authentication / Authorization
 gem 'devise', '~> 4.2'
+gem 'petergate', '~> 1.7'
 
 group :development, :test do
   gem 'byebug', platform: :mri
