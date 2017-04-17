@@ -1,3 +1,4 @@
+
 class Skill < ApplicationRecord
   include Placeholder
 

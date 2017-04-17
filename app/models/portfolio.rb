@@ -1,3 +1,4 @@
+
 class Portfolio < ApplicationRecord
   include Placeholder
 
