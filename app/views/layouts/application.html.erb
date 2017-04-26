@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
@@ -16,14 +20,12 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
-
     <%= yield %>
 
-    <%= session_helper %>
-    
     <footer>
-      &copy; <%= Time.now.year %> | <strong>Tim Craig</strong> All rights reserved.
+      <%= render "partials/footer" %>
     </footer>
+
+    <%= session_helper %>
   </body>
 </html>

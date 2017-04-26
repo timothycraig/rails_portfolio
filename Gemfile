@@ -20,10 +20,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Front End Assets
 gem 'sass-rails', '~> 5.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.1'
+gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'uglifier', '>= 1.3.0'
 gem "neat", '~> 2.0.0'
 gem "bourbon", '~> 4.3.4'
+gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 
 # Authentication / Authorization
 gem 'devise', '~> 4.2'

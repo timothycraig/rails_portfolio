@@ -10,6 +10,25 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
+//= require jquery-ui
 //= require_tree .
+
+$(document).ready(function() {
+    // Toggle mobile navigation
+    $("#navToggle a").click(function(e) {
+        e.preventDefault();
+
+        $(".header-container > nav").slideToggle("medium");
+    });
+
+    $(window).resize(function() {
+        if ($( window ).width() >= "768") {
+            $(".header-container > nav").css("display", "block");
+        }
+        else {
+            $(".header-container > nav").css("display", "none");
+        }
+    });
+});

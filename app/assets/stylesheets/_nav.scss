@@ -1,0 +1,121 @@
+
+// Mobile Header
+header {
+  background-color: $white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+
+  .header-container {
+    height: $mobile_header_height;
+    max-width: $max_width;
+    margin: 0 auto;
+    width: 100%;
+
+    #logo {
+
+      img {
+        max-height: 30px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+      
+      h1 {
+        margin: 0;
+      }
+
+      #navToggle {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transition: 300ms all ease;
+
+        a {
+          color: $light_blue;
+          display: block;
+          text-decoration: none;
+          transition: 300ms all ease;
+        }
+      }
+    }
+
+    nav {
+      background-color: $white;
+      display: none;
+      transform: 300ms all ease;
+      text-align: center;
+      position: relative;
+      z-index: 9999;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          border-bottom: 1px solid $grey;
+          position: relative;
+          a {
+            display: block;
+            color: $grey;
+            padding: 1.5rem 0;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Desktop Header
+@media (min-width: $tablet_width) {
+
+  header {
+
+    .header-container {
+      height: $desktop_header_height;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      #logo {
+
+        img {
+          max-height: 40px;
+          margin-left: 0;
+          margin-top: 0;
+        }
+
+        #navToggle {
+          display: none
+        }
+      }
+
+      nav {
+        display: block;
+        text-align: right;
+        width: 100%;
+
+        ul {
+
+          li {
+            display: inline-block;
+            margin-right: 40px;
+            border-bottom: none;
+            a {
+              color: $grey;
+              &:visited {
+                color: $grey;
+              }
+            }
+            &.current-menu-item {
+              a {
+                color: $light_blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
