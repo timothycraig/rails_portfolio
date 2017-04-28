@@ -11,18 +11,28 @@ $light_blue: #00bcdd;
  Containers & Media Queries
 ---------------------------------------------------- */
 
-// Containers & Media Queries
-$max_width: 1200px;
-$tablet_width: 768px;
-
+// header heights
 $desktop_header_height: 80px;
 $mobile_header_height: 50px;
+
+// max widths
+$max_width_gutter: 60px;
+$max_width: 1200px;
+$max_width_margin: $max_width + $max_width_gutter;
+
+// Containers & Media Queries
+$mobile_small_width: 320px;
+$mobile_large_width: 480px;
+$tablet_width: 768px;
+$desktop_width: 1024px;
+$desktop_width_large: $max_width + $max_width_gutter;
 
 /* ----------------------------------------------------
  Custom Grids (media queries are min-width)
  NOTE: Grids are designed with a mobile first approach
 ---------------------------------------------------- */
 
+// Grids with gutters
 $mobile_small_on_up: (
   columns: 12,
   gutter: 20px,
@@ -44,5 +54,30 @@ $tablet_on_up: (
 $desktop_on_up: (
   columns: 12,
   gutter: 20px,
+  media: 1024px,
+);
+
+// No gutters
+$mobile_small_on_up_full: (
+  columns: 12,
+  gutter: 0,
+  media: 320px,
+);
+
+$mobile_large_on_up_full: (
+  columns: 12,
+  gutter: 0,
+  media: 480px,
+);
+
+$tablet_on_up_full: (
+  columns: 12,
+  gutter: 0,
+  media: 768px,
+);
+
+$desktop_on_up_full: (
+  columns: 12,
+  gutter: 0,
   media: 1024px,
 );

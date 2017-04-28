@@ -1,7 +1,5 @@
 
 section#title {
-  @include grid-container;
-  @include padding(30px 0);
 
   h1 {
     @include grid-column(12);
@@ -9,22 +7,22 @@ section#title {
 }
 
 section#text {
-  @include grid-container;
-  @include padding(30px 0);
+  .content-container {
+    .grid-columns {
+      p {
+        @include grid-column(12);
+        margin-bottom: 2rem;
 
-  p {
-    @include grid-column(12);
-    margin-bottom: 2rem;
-
-    @include grid-media($tablet_on_up) {
-      @include grid-column(6);
+        @include grid-media($tablet_on_up) {
+          @include grid-column(6);
+        }
+      }
     }
   }
 }
 
+
 section#boxes {
-  @include grid-container;
-  @include padding(30px 0);
 
   .box {
     @include size(300px);
@@ -38,6 +36,46 @@ section#boxes {
     }
 
     @include grid-media($desktop_on_up) {
+      @include grid-column(3);
+    }
+  }
+}
+
+// section#boxes-nested {
+//
+//   .box {
+//     @include size(300px);
+//     background-image: linear-gradient(to bottom right, #21e9f4, #00bcdd);
+//
+//     @include grid-column(12);
+//     margin-bottom: 2rem;
+//
+//     @include grid-media($tablet_on_up) {
+//       @include grid-column(6);
+//     }
+//
+//     @include grid-media($desktop_on_up) {
+//       @include grid-column(3);
+//     }
+//   }
+// }
+
+
+section#boxes-full-width {
+
+  .box {
+    @include size(300px);
+    background-image: linear-gradient(to bottom right, #21e9f4, #00bcdd);
+
+    @include grid-media($mobile_small_on_up_full) {
+      @include grid-column(12);
+    }
+
+    @include grid-media($tablet_on_up_full) {
+      @include grid-column(6);
+    }
+
+    @include grid-media($desktop_on_up_full) {
       @include grid-column(3);
     }
   }

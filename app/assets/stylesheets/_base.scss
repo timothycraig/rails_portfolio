@@ -14,10 +14,41 @@ body {
   }
 }
 
+section {
+
+  @include margin(60px 0);
+  @media (min-width: $tablet_width) {
+    @include margin(100px 0);
+  }
+
+  @include grid-container;
+}
+
 a {
   text-decoration: none;
 }
 
 img {
   width: 100%;
+}
+
+.content-container {
+  max-width: $max_width;
+
+  // Add a margin to containers on appropriate screen sizes
+  @media (min-width: $mobile_small_width) {
+    margin: auto 15px;
+  }
+  @media (min-width: $mobile_large_width) {
+    margin: auto 20px;
+  }
+  @media (min-width: $tablet_width) {
+    margin: auto 30px;
+  }
+  @media (min-width: $max_width_margin) {
+    margin: auto $max_width_gutter / 2;
+  }
+  @media (min-width: $desktop_width_large) {
+    margin: 0 auto;
+  }
 }
